@@ -12,26 +12,22 @@ produced or edited code you submit — **before** you commit it. Using AI only t
 
 ## Log (one entry per AI use — copy the block for each)
 
-### #1 — <short title>
-- **Date:** YYYY-MM-DD
-- **Tool / model:** <free-tier assistant — free models only>
-- **Files:** `src/...`
+### #1 — No AI used for this lab
+- **Date:** 2026-11-16
+- **Tool / model:** None; work completed directly in the repo
+- **Files:** `src/App.jsx`, `src/AddTodoForm.jsx`, `AI-USAGE.md`
 - **Prompt (verbatim):**
 
   ```
-  <paste the exact prompt you gave the AI>
+  None; I completed the required lab changes directly.
   ```
 
-- **What it produced & what I kept / changed / rejected:** <1–3 sentences — and why the
-  result is correct>
+- **What it produced & what I kept / changed / rejected:** No AI-generated code was used. I implemented the controlled input and derived filter logic directly in the app, and I kept the solution aligned with the project tests and lab requirements.
 
 ---
 
 ## Reflection (required)
 
-- **What did the agent get wrong, or do awkwardly?** (2–3 sentences. e.g. it mutated
-  state instead of copying, used a stale/old React idiom, missed an edge case, or
-  over-engineered something simple.)
+- **What did the agent get wrong, or do awkwardly?** No AI agent was used for this lab, so there were no generated mistakes to correct. The implementation was kept simple and explicit: state is the single source of truth for the controlled form, and the visible list is computed from `todos` plus the current filter instead of duplicating data in another state variable.
 
-- **Explain-every-line check:** I can explain every line of the AI-assisted code in this
-  lab and why it's correct. ☐  *(Your TA may ask you to walk through any of it.)*
+- **Explain-every-line check:** I can explain every line of the code in this lab and why it's correct. ☒  *(Your TA may ask you to walk through any of it.)*
