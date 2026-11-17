@@ -12,22 +12,53 @@ produced or edited code you submit — **before** you commit it. Using AI only t
 
 ## Log (one entry per AI use — copy the block for each)
 
-### #1 — No AI used for this lab
+### #1 — Syntax Error
 - **Date:** 2026-11-16
-- **Tool / model:** None; work completed directly in the repo
-- **Files:** `src/App.jsx`, `src/AddTodoForm.jsx`, `AI-USAGE.md`
-- **Prompt (verbatim):**
+- **Tool / model:** Copilot Free
+- **Files:** `src/AddTodoForm.jsx`
+- **Prompt (verbatim):**  Getting an error syntax error on line 19 can you fix the error
+
+### #2 — Return Statement
+- **Date:** 2026-11-16
+- **Tool / model:** Copilot Free
+- **Files:** `src/App.jsx`
+- **Prompt (verbatim):**  Write the return statement that allows users to switch between different views of their tasks(all,active, completed)
 
   ```
-  None; I completed the required lab changes directly.
+  1. Getting an syntax error on line 19 can you fix the error
+  2. Write the return statement that allows users to switch between different views of their tasks(all,active, completed)
+
   ```
 
-- **What it produced & what I kept / changed / rejected:** No AI-generated code was used. I implemented the controlled input and derived filter logic directly in the app, and I kept the solution aligned with the project tests and lab requirements.
+- **What it produced & what I kept / changed / rejected:** 
+- For my first prompt it gave me 
+      ```
+        name="text"
+        value={text}
+        onChange={(event) => setText(event.target.value)}
+        placeholder="Add a todo…"
+      ```
+
+-For my second prompt it gave me
+    ```
+        <div className="filter-bar">
+            <button type="button" onClick={() => setFilter("all")}>
+              All
+            </button>
+            <button type="button" onClick={() => setFilter("active")}>
+              Active
+            </button>
+            <button type="button" onClick={() => setFilter("completed")}>
+              Completed
+            </button>
+          </div>
+    ```
 
 ---
 
 ## Reflection (required)
 
-- **What did the agent get wrong, or do awkwardly?** No AI agent was used for this lab, so there were no generated mistakes to correct. The implementation was kept simple and explicit: state is the single source of truth for the controlled form, and the visible list is computed from `todos` plus the current filter instead of duplicating data in another state variable.
+- **What did the agent get wrong, or do awkwardly?** 
+Tried to change the import statement but overall accepted both changes
 
 - **Explain-every-line check:** I can explain every line of the code in this lab and why it's correct. ☒  *(Your TA may ask you to walk through any of it.)*
